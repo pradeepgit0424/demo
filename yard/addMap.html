@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Add Map</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body onload="initAutocomplete();">
+    <div class="output">
+      <button id="delete-button">Delete Selected Shape</button>
+      <div id="color-palette"></div>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <div>Selected Type</div>
+          <div class="font-weight-bold" id="seltype"></div>
+          <div>Zoom</div>
+          <div class="font-weight-bold" id="zoomdiv"></div>
+          <div>Screen Center Co-ordinates</div>
+          <div class="font-weight-bold" id="centercordinatesdiv"></div>
+          <div>Drawing element Co Ordinates</div>
+          <div class="font-weight-bold" id="drawingcordinatesdiv"></div>
+          <div>Radius</div>
+          <div class="font-weight-bold" id="radiusdiv"></div>
+          <div>Bonds</div>
+          <div class="font-weight-bold" id="bondsdiv"></div>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="details-tab">
+      
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <input type="text" class="card=title form-control" placeholder="Enter Map Name"/>
+      </div>
+      <div class="card-header card-body">
+        <a href="#" class="card-link">Add Layer</a>
+        <button class="btn btn-primary btn-sm float-right"> Save Map</button>
+      </div>
+      <div class="card-body">
+        <span id="searchedplace">Location</span>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <input type="text" class="card=title form-control" placeholder="Enter Layer Name"/>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Cras justo odio</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+      </ul>
+     
+    </div>
+    <input id="pac-input" class="controls form-control" type="text" placeholder="Search Box">
+
+  </div>
+    
+    <div id="map"></div>
+    <script src="./script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFyPVnnHIeM9uD-h4vUcL3Zy_gZv-zbis&libraries=places,drawing"
+         async defer></script>
+  </body>
+</html>
