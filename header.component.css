@@ -1,0 +1,79 @@
+#header {
+	background-color: black;
+	height: 2.7rem;
+	box-shadow: 0px 3px 4px grey !important;
+	/* min-width: 92rem; */
+}
+
+#outdoorLink, #indoorLink, #adminLink {
+	margin-bottom: 0rem;
+}
+#outdoorLink {
+	margin-left: 2rem;
+}
+ #indoorLink {
+     margin-left: 1rem;
+ }
+#adminLink {
+	margin-left: 1rem;
+}
+
+.cursor-pointer {
+	cursor: pointer !important;
+}
+
+.cust-text {
+	color: #C32F27;
+  font-weight: 500;
+}
+
+@media (min-width: 992px) {
+	.navbar-dark .navbar-nav .nav-link.active {
+		background-color: #333333;
+		border-bottom: 2px solid #C32F27;
+	}
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #C32F27;
+}
+
+
+
+/* css for nbg tool tip bg color*/
+.toolTipProperties .tooltip-inner{
+    background-color: #c32f27 !important;
+}
+
+/* css for nbg tool tip bg color*/
+.toolTipProperties .arrow::before{
+    border-top-color: #c32f27 !important;
+}
+  
+
+@media (min-width: 992px) {
+	.navbar-dark .navbar-nav .nav-item.active {
+		background-color: #333333;
+		border-bottom: 2px solid #C32F27;
+	}
+}
+
+@media (max-width: 991px) {
+	#header{
+		height: auto !important;
+	}
+}
+
+/* Dropdown custom mouse hover backgroud color */
+.dropdown-item:focus, .dropdown-item:hover {
+	background-color: #C32F27 !important;
+	color: white !important;
+
+  }
+
+/* Help icon margin */
+.mailSend {
+	margin-top: 6px;
+}
