@@ -21,7 +21,7 @@ export class AdminComponent implements OnInit {
   // initial center position for the map
   lat: number = 12.355876;
   lng: number = 76.592042;
-  zoomdiv: HTMLElement;
+  zoomdiv: number;
   seltype: HTMLElement;
   centercordinatesdiv: HTMLElement;
 
@@ -68,15 +68,7 @@ export class AdminComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    // const mapProperties = {
-    //   center: new google.maps.LatLng(35.2271, -80.8431),
-    //   zoom: 15,
-    //   mapTypeId: google.maps.MapTypeId.ROADMAP
-    // };
-    // this.map = new google.maps.Map(this.mapElement.nativeElement, mapProperties);
-
     this.initAutocomplete();
-
   }
 
   clearSearch() {
@@ -84,11 +76,10 @@ export class AdminComponent implements OnInit {
     input.value = '';
   }
 
-
   initAutocomplete() {
 
     this.centercordinatesdiv = document.getElementById('centercordinatesdiv');
-    this.zoomdiv = document.getElementById('zoomdiv');
+    //this.zoomdiv = document.getElementById('zoomdiv');
     this.seltype = document.getElementById('seltype');
     var map = new google.maps.Map(document.getElementById('map'), {
       center: { lat: 22.307817859874035, lng: 73.26230764389038 },
@@ -103,21 +94,22 @@ export class AdminComponent implements OnInit {
     };
     var infoWindow = new google.maps.InfoWindow();
     var latlngbounds = new google.maps.LatLngBounds();
-
-    google.maps.event.addListener(map, 'click', function (e) {
-      // localStorage.setItem('dataSource', this.dataSource.length);
-      // console.log(localStorage.getItem('dataSource'));
-      alert("Latitude: " + e.latLng.lat() + "\r\nLongitude: " + e.latLng.lng());
-    });
-
+    google.maps.event.addListener(map,'click',  function (e) {
+          this.zoomdiv = map.getZoom();
+            alert("Latitude: " + e.latLng.lat() + "\r\nLongitude: " + e.latLng.lng()+ "\r\nZoom: " + map.getZoom());
+        });
+       
     // Create the search box and link it to the UI element.
     var input = document.getElementById('pac-input') as HTMLInputElement;
     var searchBox = new google.maps.places.SearchBox(input);
+    var  zoomdiv = document.getElementById('zoomdiv');
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
     // Bias the SearchBox results towards current map's viewport.
     map.addListener('bounds_changed', function () {
       searchBox.setBounds(map.getBounds());
+      document.getElementById('centercordinatesdiv').innerHTML = map.getCenter().toUrlValue();
+      zoomdiv.innerHTML = map.getZoom().toString();
     });
 
     var markers = [];
