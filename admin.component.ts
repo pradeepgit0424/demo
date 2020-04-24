@@ -24,6 +24,7 @@ export class AdminComponent implements OnInit {
   zoomdiv: number;
   seltype: HTMLElement;
   centercordinatesdiv: HTMLElement;
+  mapName: any;
 
   clickedMarker(label: string, index: number) {
     console.log(`clicked the marker: ${label || index}`)
@@ -75,6 +76,19 @@ export class AdminComponent implements OnInit {
     var input = document.getElementById('pac-input') as HTMLInputElement;
     input.value = '';
   }
+  displaySearch() {
+    var input = document.getElementById('pac-input') as HTMLInputElement;
+    // input.value = this.maps.sear
+  }
+
+  // method to save map data
+  saveClick() {
+
+    this.zoomdiv;
+    this.centercordinatesdiv;
+    this.mapName;
+    alert("data saved");
+  }
 
   initAutocomplete() {
 
@@ -94,15 +108,15 @@ export class AdminComponent implements OnInit {
     };
     var infoWindow = new google.maps.InfoWindow();
     var latlngbounds = new google.maps.LatLngBounds();
-    google.maps.event.addListener(map,'click',  function (e) {
-          this.zoomdiv = map.getZoom();
-            alert("Latitude: " + e.latLng.lat() + "\r\nLongitude: " + e.latLng.lng()+ "\r\nZoom: " + map.getZoom());
-        });
-       
+    google.maps.event.addListener(map, 'click', function (e) {
+      this.zoomdiv = map.getZoom();
+      alert("Latitude: " + e.latLng.lat() + "\r\nLongitude: " + e.latLng.lng() + "\r\nZoom: " + map.getZoom());
+    });
+
     // Create the search box and link it to the UI element.
     var input = document.getElementById('pac-input') as HTMLInputElement;
     var searchBox = new google.maps.places.SearchBox(input);
-    var  zoomdiv = document.getElementById('zoomdiv');
+    var zoomdiv = document.getElementById('zoomdiv');
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
     // Bias the SearchBox results towards current map's viewport.
