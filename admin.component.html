@@ -9,22 +9,7 @@
             <hr class="ul">
         </div>
     </div>
-    <!-- <div class="col-md-3 heading">
-            <label>Selected Location</label>
-            <input class="textbox" class="form-control" type="text" id="text" placeholder="">
-        </div>
-        <br>
-        <div class="col-md-3 heading">
-            <label>Latitude</label>
-            <input class="textbox" class="form-control" type="text" id="text" placeholder="">
-        </div>
-        <br>
-        <div class="col-md-3 heading">
-            <label>Longitude</label>
-            <input class="textbox" class="form-control" type="text" id="text" placeholder="">
-            <a class="line" type="button" data-toggle="modal" data-target="#myModal">Get coordinates from
-                Google</a>
-               </div> -->
+
     <div class="col-md-3">
         <button type="button" id="text" class="btn btn-default btn-clear">Clear</button>
 
@@ -35,7 +20,7 @@
     <div class="pac-card" id="pac-card">
         <div class="pac-container" id="pac-container">
             <input id="pac-input" class="controls" type="text" placeholder="Search Box" />
-            <i class="fa fa-search"></i>&nbsp;|
+            <i class="fa fa-search" (click)="displaySearch()"></i>&nbsp;|
             <i class="fa fa-close" (click)="clearSearch()"></i>
         </div>
     </div>
@@ -45,6 +30,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- On map card section -->
     <div class="output">
         <div class="card" style="width: 18rem;">
             <div class="card-body">
@@ -53,20 +39,25 @@
                 <div class="font-weight-bold" id="seltype"></div>
                 <div>Zoom
                 </div>
-                <div class="font-weight-bold" id="zoomdiv"><p>{{ zoomdiv }}</p></div>
+                <div class="font-weight-bold" id="zoomdiv">
+                    <p>{{ zoomdiv }}</p>
+                </div>
                 <div>Screen Center Co-ordinates</div>
-                <div class="font-weight-bold" id="centercordinatesdiv"><p>{{ centercordinatesdiv }}</p></div>
+                <div class="font-weight-bold" id="centercordinatesdiv">
+                    <p>{{ centercordinatesdiv }}</p>
+                </div>
             </div>
         </div>
     </div>
+    <!-- Details for saving map -->
     <div class="details-tab">
         <div class="card" style="width: 18rem;">
             <div class="card-body">
-                <input type="text" class="card=title form-control" placeholder="Enter Map Name" />
+                <input type="text" class="card=title form-control" placeholder="Enter Map Name" [(ngModel)]="mapName" />
             </div>
             <div class="card-header card-body">
                 <a href="#" class="card-link">Add Layer</a>
-                <button class="btn btn-primary btn-sm float-right"> Save Map</button>
+                <button class="btn btn-primary btn-sm float-right" (click)="saveClick()"> Save Map</button>
             </div>
             <div class="card-body">
                 <span id="searchedplace">Location</span>
