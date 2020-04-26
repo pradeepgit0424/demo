@@ -1,1 +1,22 @@
 https://codinginfinite.com/entity-framework-core-database-first-net-core-scaffold-mysql-db/
+
+GO
+
+/****** Object:  Table [dbo].[sensor_data]    Script Date: 26-04-2020 23:15:46 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[sensor_data](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[topic] [varchar](255) NOT NULL,
+	[payload] [varchar](max) NULL,
+	[time_stamp] [datetime] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
