@@ -91,3 +91,20 @@ namespace YMApi
         }
     }
 }
+
+client.UseApplicationMessageReceivedHandler(e =>
+{
+  try
+  {
+    string topic = e.ApplicationMessage.Topic;
+    if (string.IsNullOrWhiteSpace(topic) == false)
+    {
+      string payload = Encoding.UTF8.GetString(e.ApplicationMessage.Payload);
+      Console.WriteLine($"Topic: {topic}. Message Received: {payload}");
+    }
+  }
+  catch (Exception ex)
+  {
+    Console.WriteLine(ex.Message, ex);
+  }
+});
