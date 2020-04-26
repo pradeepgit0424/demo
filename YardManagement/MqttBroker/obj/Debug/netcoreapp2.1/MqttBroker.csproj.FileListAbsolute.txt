@@ -1,0 +1,9 @@
+D:\Projects\YardManagement\YardManagement\MqttBroker\bin\Debug\netcoreapp2.1\MqttBroker.deps.json
+D:\Projects\YardManagement\YardManagement\MqttBroker\bin\Debug\netcoreapp2.1\MqttBroker.dll
+D:\Projects\YardManagement\YardManagement\MqttBroker\bin\Debug\netcoreapp2.1\MqttBroker.pdb
+D:\Projects\YardManagement\YardManagement\MqttBroker\obj\Debug\netcoreapp2.1\MqttBroker.csprojAssemblyReference.cache
+D:\Projects\YardManagement\YardManagement\MqttBroker\obj\Debug\netcoreapp2.1\MqttBroker.csproj.CoreCompileInputs.cache
+D:\Projects\YardManagement\YardManagement\MqttBroker\obj\Debug\netcoreapp2.1\MqttBroker.AssemblyInfoInputs.cache
+D:\Projects\YardManagement\YardManagement\MqttBroker\obj\Debug\netcoreapp2.1\MqttBroker.AssemblyInfo.cs
+D:\Projects\YardManagement\YardManagement\MqttBroker\obj\Debug\netcoreapp2.1\MqttBroker.dll
+D:\Projects\YardManagement\YardManagement\MqttBroker\obj\Debug\netcoreapp2.1\MqttBroker.pdb
