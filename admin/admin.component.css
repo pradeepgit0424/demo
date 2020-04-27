@@ -1,0 +1,194 @@
+.titleParameter{
+    color:#c32f27 ;
+    font-weight: 600;
+
+}
+
+.heading{
+    color: black;
+    font-weight: 500
+    ;
+}
+
+.boxShadow {
+    padding: 2rem;
+    -moz-box-shadow: 0 0 5px #272525;
+    -webkit-box-shadow: 0 0 5px #272525;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+  }
+ 
+.boxShadow1 {
+    padding: 2rem;
+    -moz-box-shadow: 0 0 5px #272525;
+    -webkit-box-shadow: 0 0 5px #272525;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #e4e4e4;
+    
+  }
+
+  .ul{
+    border:0.5px solid #c32f27 ;
+}
+
+.line{
+font-weight: 600;
+font-size: 13px;
+color: #c32f27;
+text-decoration: none;
+}
+
+.btn-clear { 
+    background: white;
+    color: #CC1F25;
+    border-radius: 1.8rem;
+    width: 7.2rem;
+    height: 2.18rem;
+    border-color: #CC1F25;
+    margin-top: 0.5rem;
+    margin-left: 0.6rem;
+    
+  }
+
+  .btn-add{
+    background: #CC1F25;
+    color: white;
+    border-radius: 1.8rem;
+    width: 7.2rem;
+    height: 2.18rem;
+    margin-top: 0.5rem;
+    margin-left: 1.56rem;
+    border: 1px solid #A21E25;
+    background-image: linear-gradient(to top, #A21E25, #E11E25);
+  }
+  
+  
+/* CSS for Map Alert PopUp starts */
+agm-map {
+  height: 30rem;
+  width: 40rem;
+}
+.modal-content {
+    width: 135% !important;
+}
+/* CSS for Map Alert PopUp ends */
+
+/* Always set the map height explicitly to define the size of the div
+ * element that contains the map. */
+ #map {
+  height: 100%;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#description {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+#infowindow-content .title {
+  font-weight: bold;
+}
+
+#infowindow-content {
+  display: none;
+}
+
+#map #infowindow-content {
+  display: inline;
+}
+
+.pac-card {
+  margin: 10px 10px 0 0;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  font-family: Roboto;
+}
+
+.pac-container {
+ 
+  margin-left: 42.3rem;
+  margin-top: 28px;
+  box-shadow: none;
+
+  border-left-style: none;
+  border-top: none !important;
+}
+
+.pac-controls {
+  display: inline-block;
+  padding: 5px 11px;
+}
+
+.pac-controls label {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+#pac-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 400px;
+  height: 2rem;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+}
+
+#title {
+  color: #fff;
+  background-color: #4d90fe;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 6px 12px;
+}
+#target {
+  width: 345px;
+}
+
+.fa-search {
+    margin-top: 5px;
+}
+.fa-close {
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.output{
+  float: right;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  padding: 20px;
+}
+
+.details-tab{
+  position: absolute;
+  z-index: 1;
+  margin: 25px;
+}
+
+#pac-input{
+  left:20rem !important;
+  top:25px !important;
+  position: fixed;
+}
+
+.card{
+  bottom: -35px;
+}
