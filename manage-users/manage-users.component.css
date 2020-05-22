@@ -1,0 +1,232 @@
+/* Css Main Container */
+.container-asset, .container-lg, .container-md, .container-sm, .container-xl {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+}
+
+/*Css for heading style*/
+
+
+/*Css for rowAlignment style*/
+.rowAlignment {
+  padding: 0 15px;
+  margin-top: 5px;
+}
+
+/* Css for form control */
+.form-group{
+margin-left: 30px;
+}
+
+/* Add/Update button for disable */
+ .btn-add{
+    color: white ;
+    border-radius: 12px;
+    width: 7.2rem;
+    height: 2.18rem;
+    margin-top: 0.5rem;
+    margin-left: 1.56rem;
+    border: 1px solid #A21E25;
+    background-image: linear-gradient(to top, #A21E25, #E11E25);
+}
+
+ /*Css for Clear button*/
+.btn-clear{
+    background: white;
+    color: #CC1F25;
+    border-radius: 12px;
+    width: 7.2rem;
+    height: 2.18rem;
+    border-color: #CC1F25;
+    margin-top: 0.5rem;
+    margin-left: 2.6rem;
+    margin-right: 1rem;
+  }
+
+  /* Css Ng2-smart table */
+  .t-size {
+    line-height: 1.5em;
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: table;
+    width: 95%;
+    overflow: auto;
+    word-break: normal;
+    word-break: keep-all;
+    margin-left: 21px;
+  }
+
+/*  Css for right side card*/
+  .cardRight {
+    position: relative;
+    color: #c32f27;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 1.25rem;
+    float: right;
+    width: 640px;
+    box-shadow: 0 0 10px 4px rgba(0,0,0,.1);
+    margin-right: 19px;
+  }
+
+/* Css for left side card */
+  .cardLeft{
+    position: relative;
+    color: #c32f27;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 1.25rem;
+    float: left;
+    width: 820px;
+    height: 630px;
+    margin-top: 2px;
+    box-shadow: 0 0 10px 4px rgba(0,0,0,.1);
+    margin-left: 19px;
+  }
+
+  /* Css for button on right side */
+  .pull-right{
+    margin-top: 25px;
+    float: right;
+  }
+
+/*  css formcontrol  */
+  .form-control {
+    display: block;
+    width: 27%;
+    margin-top: 17px;
+    margin-left: 21px;
+    margin-bottom: 10px;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+/* padding top pagination  */
+.ng2-smart-pagination-nav {
+  margin-top: 2rem;
+  }
+
+/* pagination color  */
+.page-item.active .page-link{
+    z-index: 1;
+    color: #fff;
+    background-color: steelblue;
+    border-color: steelblue;;
+}
+
+/* Pagination of Smart table (on-hover) */
+.page-link:hover {
+  z-index: 2;
+  color: #CC1F25;
+  text-decoration: none;
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+}
+
+/* Pagination of Smart table : Page Link alignment */
+.ng2-smart-pagination .page-link {
+font-size: 0.875rem !important;
+color: #CC1F25;
+}
+
+/* Pagniation of table in Right */
+.ng2-smart-table-pager {
+  text-align: right ;
+  display: contents ;
+}
+
+.manageUserConatiner {
+    padding: 0px 28px;
+  }
+  
+  .titleParameter {
+    background-color: #eaebed;
+    padding: 3px 10px;
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+  
+  .alignSearchBar {
+    background-color: #eaebed;
+    padding-left: 0.9rem;
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+  }
+  
+  .nav-pills .nav-link.active {
+    background-color: grey;
+    color: #fff;
+  }
+  
+  .nav-pills .nav-link {
+    color: #000;
+  }
+  
+  /* alignment for Product dropdowns */
+  .alignProductDropdowns {
+    margin-bottom: 1rem;
+  }
+  
+  /* Submit and Clear buttons */
+  .btn-clear,
+  .btn-jrrdan {
+    padding: 5px 25px;
+  }
+  
+  /* clear button  */
+  .btn-clear {
+    margin-right: 2em;
+    border: 1px solid grey;
+  }
+  
+  .rowAlignment {
+    padding: 0 15px;
+    margin-top: 5px;
+  }
+  .modal-title {
+    font-size: 18px;
+  }
+  
+  .modal-dialog {
+    margin-top: 20rem;
+  }
+  .form-control.ng-touched.ng-invalid{border:1px solid red;}
+  .form-control.ng-valid{border:1px solid green;}
+  
+  .suggestionRecepient{ 
+    vertical-align: middle;
+    margin-left: 0.5rem !important;
+  }
+  
+  .recepient {
+    margin-left: 10px;
+    vertical-align: inherit;
+  }
+  
+  .form-control-feedback{
+    font-size: 14px !important;
+  }
+  

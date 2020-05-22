@@ -1,0 +1,48 @@
+<!-- Main container to place cards -->
+<div class="container-asset boxShadow bgGrey" id="manageAsset">
+    <!-- Right side card includes dropdown -->
+    <div class=" card cardRight">
+        <div class="card-header">
+            Select Details
+        </div>
+        <div class="card-body">
+            <div class=" col-md-12 heading">
+                <label>Vehicle Name</label>
+                <ng-select id="vehicleNames" bindLabel="vehicleName" bindValue="vehicleId" placeholder="Select"
+                    [items]="vehicleList" [(ngModel)]="selectedVehicleId" [ngModelOptions]="{standalone: true}"
+                    [closeOnSelect]="true">
+                </ng-select>
+            </div>
+            <div class=" col-md-12 heading">
+                <label>Asset Name</label>
+                <ng-select [items]="assetList" bindLabel="assetName" bindValue="assetId" placeholder="Select"
+                    [(ngModel)]="selectedAssetId" id="assetName" [ngModelOptions]="{standalone: true}"
+                    [closeOnSelect]="true">
+                </ng-select>
+            </div>
+            <!-- Add/Update clear buttons section  -->
+            <div class="alignProductDropdowns pull-right">
+                <button type="button" id="text" class="btn btn-default btn-add" (click)="saveClick()">
+                    <P class="addLabelFont">Save</P>
+                </button>
+                <span>
+                    <button class="btn btn-sm btn-clear" (click)="clearAllVariables()"> Clear</button>
+                </span>
+            </div>
+        </div>
+    </div>
+    <!-- Ng2-smart-table left card -->
+    <div class=" card cardLeft">
+        <div class="card-header">
+            Asset Vehicle Mapping
+        </div>
+        <div class="" id='button-holder'>
+            <input #searchBox id="search-box" placeholder="Search" class="form-control"
+                (input)="search(searchBox.value)" />
+        </div>
+        <!-- Ng-2 smart table content -->
+        <ng2-smart-table class="table table-striped table-hover table-responsive t-size" [settings]="tableSettings"  
+                         [source]="vehicleAssetData" (edit)="editVehicleAsset($event)">
+        </ng2-smart-table>
+    </div>
+</div>
