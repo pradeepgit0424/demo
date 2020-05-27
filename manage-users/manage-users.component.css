@@ -1,15 +1,12 @@
 /* Css Main Container */
-.container-asset, .container-lg, .container-md, .container-sm, .container-xl {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 30px;
+.container-user, .container-lg, .container-md, .container-sm, .container-xl {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
 }
-
-/*Css for heading style*/
-
 
 /*Css for rowAlignment style*/
 .rowAlignment {
@@ -20,6 +17,7 @@
 /* Css for form control */
 .form-group{
 margin-left: 30px;
+margin-top: -10px;
 }
 
 /* Add/Update button for disable */
@@ -47,18 +45,19 @@ margin-left: 30px;
     margin-right: 1rem;
   }
 
-  /* Css Ng2-smart table */
-  .t-size {
-    line-height: 1.5em;
-    border-collapse: collapse;
-    border-spacing: 0;
-    display: table;
-    width: 95%;
-    overflow: auto;
-    word-break: normal;
-    word-break: keep-all;
-    margin-left: 21px;
-  }
+  
+ /* Css Ng2-smart table */
+ .t-size {
+  line-height: 1.5em;
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: table;
+  width: 95%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+  margin-left: 21px;
+}
 
 /*  Css for right side card*/
   .cardRight {
@@ -72,10 +71,11 @@ margin-left: 30px;
     background-clip: border-box;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: 1.25rem;
-    float: right;
-    width: 640px;
+    width: 100%;
+    margin-left: 32px;
+    margin-right: -32px;
     box-shadow: 0 0 10px 4px rgba(0,0,0,.1);
-    margin-right: 19px;
+    /* margin-right: 19px; */
   }
 
 /* Css for left side card */
@@ -90,39 +90,20 @@ margin-left: 30px;
     background-clip: border-box;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: 1.25rem;
-    float: left;
-    width: 820px;
-    height: 630px;
+    width: 100%;
+    height: 675px;
     margin-top: 2px;
+    margin-left: 20px;
     box-shadow: 0 0 10px 4px rgba(0,0,0,.1);
-    margin-left: 19px;
+    /* margin-left: 19px; */
   }
 
   /* Css for button on right side */
   .pull-right{
-    margin-top: 25px;
+    margin-top: -1px;
     float: right;
+    margin-right: 9px;
   }
-
-/*  css formcontrol  */
-  .form-control {
-    display: block;
-    width: 27%;
-    margin-top: 17px;
-    margin-left: 21px;
-    margin-bottom: 10px;
-    height: calc(1.5em + .75rem + 2px);
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
 
 /* padding top pagination  */
 .ng2-smart-pagination-nav {
@@ -158,24 +139,6 @@ color: #CC1F25;
   display: contents ;
 }
 
-.manageUserConatiner {
-    padding: 0px 28px;
-  }
-  
-  .titleParameter {
-    background-color: #eaebed;
-    padding: 3px 10px;
-    margin-top: 10px;
-    line-height: 1.5;
-  }
-  
-  .alignSearchBar {
-    background-color: #eaebed;
-    padding-left: 0.9rem;
-    padding-top: 0.9rem;
-    padding-bottom: 0.9rem;
-  }
-  
   .nav-pills .nav-link.active {
     background-color: grey;
     color: #fff;
@@ -185,48 +148,15 @@ color: #CC1F25;
     color: #000;
   }
   
-  /* alignment for Product dropdowns */
-  .alignProductDropdowns {
-    margin-bottom: 1rem;
-  }
-  
-  /* Submit and Clear buttons */
-  .btn-clear,
-  .btn-jrrdan {
-    padding: 5px 25px;
-  }
-  
-  /* clear button  */
-  .btn-clear {
-    margin-right: 2em;
-    border: 1px solid grey;
-  }
-  
-  .rowAlignment {
-    padding: 0 15px;
-    margin-top: 5px;
-  }
-  .modal-title {
-    font-size: 18px;
-  }
-  
   .modal-dialog {
     margin-top: 20rem;
   }
+
   .form-control.ng-touched.ng-invalid{border:1px solid red;}
   .form-control.ng-valid{border:1px solid green;}
-  
-  .suggestionRecepient{ 
-    vertical-align: middle;
-    margin-left: 0.5rem !important;
-  }
-  
-  .recepient {
-    margin-left: 10px;
-    vertical-align: inherit;
-  }
-  
+ 
   .form-control-feedback{
     font-size: 14px !important;
   }
-  
+   
+
