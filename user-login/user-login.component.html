@@ -1,55 +1,42 @@
 <!-- Background main image -->
-<div class="main-container">
+<div class="main-container " [@fadeIn]>
   <img src="./assets/images/login_bcg.png" class="bgimg">
-</div>
-<!-- Container for login form -->
-<div class="container">
-  <div class="col-md-12 col-md-6 col-lg-10">
-    <!-- Logo and text section -->
-    <form [formGroup] class="col-md-9 col-sm-2 form-group  logoimg">
+  <!-- Container for login form -->
+  <div class="col-md-auto">
+  <form class=" col-4 col-sm-4  form-horizontal " [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="text-center form-group">
       <img src="./assets/images/lnt_logo.png">
-      <p class="header-text col-md-9 form-group">Yard Management</p>
-    </form>
-    <!-- login form -->
-    <div id="login">
-      <!-- Form -->
-      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-        <fieldset class="clearfix">
-          <!-- UserName Textbox section -->
-          <div class="form-group">
-            <span class="fa fa-user"></span>
-            <input type="text" class="form-control" formControlName="username" id="userId"
-              [ngClass]="{ 'is-invalid': submitted && getForm.username.errors }" Placeholder="Username"
-              [(ngModel)]="selectedUsername" />
-            <div class="invalid-feedback"
-              *ngIf="getForm.username.errors && (getForm.username.dirty || getForm.username.touched)">
-              <div class="noUserName" *ngIf="getForm.username.errors.required">Username required</div>
-            </div>
-          </div>
-          <!-- Password Textbox section -->
-          <div class="form-group">
-            <span class="fa fa-lock"></span>
-            <input type="password" class="form-control" formControlName="password"
-              [ngClass]="{ 'is-invalid': submitted && getForm.password.errors }" Placeholder="Password"
-              [(ngModel)]="selectedPassword" />
-            <div class="invalid-feedback"
-              *ngIf="getForm.password.errors && (getForm.password.dirty || getForm.password.touched)">
-              <div class="noPassword" *ngIf="getForm.password.errors.required">Password Required</div>
-            </div>
-          </div>
-          <!-- Button section -->
-          <div class="form-group">
-            <div>
-              <button type="submit" class="btn btn-default btn-submit" [disabled]="!loginForm.valid">Log
-                in</button>
-              <!--Error message-->
-              <div class="text-center" *ngIf="notValidLogin">
-                <span class="invalidlogin-text">Username or password is incorrect</span>
-              </div>
-            </div>
-          </div>
-        </fieldset>
-      </form>
+      <h4 class="text-center text-secondary font-weight-normal form-group">Yard Management</h4>
     </div>
-  </div>
+    <div class="form-group">
+      <i class="fa fa-user"></i>
+      <input type="text" class="form-control " formControlName="username" id="userId"
+        [ngClass]="{ 'is-invalid': submitted && getForm.username.errors }" Placeholder="Username"
+        [(ngModel)]="selectedUsername" />
+      <div class="form-control-feedback"
+        *ngIf="getForm.username.errors && (getForm.username.dirty || getForm.username.touched)">
+        <div class="text-danger" *ngIf="getForm.username.errors.required">Username required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <span class="fa fa-lock"></span>
+      <input type="password" class="form-control" formControlName="password"
+        [ngClass]="{ 'is-invalid': submitted && getForm.password.errors }" Placeholder="Password"
+        [(ngModel)]="selectedPassword" />
+      <div class="form-control-feedback"
+        *ngIf="getForm.password.errors && (getForm.password.dirty || getForm.password.touched)">
+        <div class="text-danger" *ngIf="getForm.password.errors.required">Password Required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="form-control-feedback">
+        <button type="submit" class="form-control btn btn-primary " [disabled]="!loginForm.valid">Log
+          in</button>
+        <div class="text-center" *ngIf="notValidLogin">
+          <span class="text-danger">Username or password is incorrect</span>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
 </div>
